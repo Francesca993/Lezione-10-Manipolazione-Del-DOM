@@ -62,9 +62,11 @@ function coloreRandom() {
 let coloreCasuale = coloreRandom();
 console.log(coloreCasuale);
 
-const cambioColoreTitolo = document.getElementsByTagName("h3");
+const cambioColoreTitolo = document.getElementsByTagName("a");
 console.log(cambioColoreTitolo);
 
 for (let i = 0; i < cambioColoreTitolo.length; i++) {
-  cambioColoreTitolo[i].style.color = coloreRandom();
+  cambioColoreTitolo[i].addEventListener("mouseover", function () {
+    cambioColoreTitolo[i].style.color = coloreRandom();
+  });
 }

@@ -11,9 +11,12 @@ contenitoreArticoli.style.background = "white";
 
 // ESERCIZIO 9: Scrivi una funzione per cambiare l'indirizzo presente nel futuro in un altro, fittizio
 
-const indirizzo = document.getElementsByClassName("indirizzo");
-console.log(indirizzo);
-indirizzo.textContent = "XXXXXXXXXXXXXXX";
+const footer = document.getElementsByTagName("p");
+console.log(footer);
+for (let i = 0; i < footer.length; i++) {
+  console.log(footer[i]);
+  footer[7].textContent = "VIA XXXXXXXXXXXXXXXX";
+}
 
 // ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link
 //Amazon della tabella
@@ -34,11 +37,16 @@ for (let i = 0; i < immagine.length; i++) {
   console.log(immagine[i]);
   immagine[i].classList.add("visibilitaImg");
 }
-visibilitaImg.style.display("none");
+
+let cambioDisplay = document.querySelectorAll(".visibilitaImg");
+for (let i = 0; i < cambioDisplay.length; i++) {
+  console.log(cambioDisplay[i]);
+  cambioDisplay[i].style.display = "none";
+}
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in
 //uno differente, ogni volta che viene invocata
 
-const cambioColoreTitolo = document.querySelectorAll("h3");
+/*const cambioColoreTitolo = document.querySelectorAll("h3");
 for (let i = 0; i < cambioColoreTitolo.lenght; i++);
 console.log(cambioColoreTitolo[i]);
 {
@@ -60,4 +68,4 @@ function randomColor() {
 
 // Esempio di utilizzo
 let coloreCasuale = randomColor();
-console.log(coloreCasuale);
+console.log(coloreCasuale);*/

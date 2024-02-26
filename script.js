@@ -46,26 +46,25 @@ for (let i = 0; i < cambioDisplay.length; i++) {
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in
 //uno differente, ogni volta che viene invocata
 
-/*const cambioColoreTitolo = document.querySelectorAll("h3");
-for (let i = 0; i < cambioColoreTitolo.lenght; i++);
-console.log(cambioColoreTitolo[i]);
-{
-  cambioColoreTitolo[i].style.color = randomColor();
-}
-
 // Genera un numero casuale tra 0 e 255 per rappresentare un canale di colore
 function randomNumber() {
   return Math.floor(Math.random() * 256);
 }
 
-// Genera un colore casuale in formato "rgb(255, 255, 255)"
-function randomColor() {
-  var red = randomNumber();
-  var green = randomNumber();
-  var blue = randomNumber();
-  return "rgb(" + red + ", " + green + ", " + blue + ")";
+function coloreRandom() {
+  let r = randomNumber();
+  let g = randomNumber();
+  let b = randomNumber();
+  let colore = "rgb" + "(" + r + ", " + g + ", " + b + ")";
+  return colore;
 }
 
-// Esempio di utilizzo
-let coloreCasuale = randomColor();
-console.log(coloreCasuale);*/
+let coloreCasuale = coloreRandom();
+console.log(coloreCasuale);
+
+const cambioColoreTitolo = document.getElementsByTagName("h3");
+console.log(cambioColoreTitolo);
+
+for (let i = 0; i < cambioColoreTitolo.length; i++) {
+  cambioColoreTitolo[i].style.color = coloreRandom();
+}
